@@ -1,4 +1,4 @@
-<img width="639" alt="Screenshot 2024-01-10 at 6 38 58 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/53b574c2-3c8a-4e5a-92c9-052db3101b1d"># Deploy React Applications on AWS EKS using GitHub Actions and Terraform.
+# Deploy React Applications on AWS EKS using GitHub Actions and Terraform.
 We plan to utilize GitHub Actions and Terraform to deploy our React project on AWS EKS.
 ![readme (10)](https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/a45ea7e5-7c6b-4209-b06f-ac957aa4f5b9)
 
