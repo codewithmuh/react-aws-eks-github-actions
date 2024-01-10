@@ -35,8 +35,8 @@ You should have basic Knowledge of AWS services, Docker, Kubernetes, and GitHub 
 
 You have to Navigate to **AWS Console**.
 
+<img width="1557" alt="Screenshot 2024-01-10 at 1 46 32 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/dde7560a-7366-4dc4-8628-21e6c27fa4f2">
 
-<img width="1557" alt="Screenshot 2024-01-10 at 1 46 32 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/bec44efe-1992-47b4-b90b-72b5c5e42626">
 
 <br/>
 
@@ -44,7 +44,7 @@ Then Search/Enter **IAM**
 
 <br/>
 
-<img width="1612" alt="Screenshot 2024-01-10 at 1 48 17 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/37bb4ab4-6723-4b38-a599-06ced5d0d1c6">
+<img width="1612" alt="Screenshot 2024-01-10 at 1 48 17 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/d1763507-622a-4e22-a4ea-00cab115ecf5">
 
 <br/>
 
@@ -52,7 +52,7 @@ Click **Roles**
 
 <br/>
 
-<img width="1612" alt="Screenshot 2024-01-10 at 1 50 14 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/504e30ba-fe1e-47b9-a586-07e6e04a3dbd">
+<img width="1612" alt="Screenshot 2024-01-10 at 1 50 14 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/542841cc-5f05-41d8-892f-dba00056890a">
 
 <br/>
 <br/> 
@@ -61,7 +61,7 @@ Then Click **Create role**
 
 <br/>
 
-<img width="1728" alt="Screenshot 2024-01-10 at 1 56 03 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/a1b46904-9783-4b7a-84b2-72d9d7c34548">
+<img width="1728" alt="Screenshot 2024-01-10 at 1 56 03 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/38016a29-8358-499b-8783-6febdc82e16f">
 
 <br/> 
 <br/>
@@ -71,7 +71,7 @@ Now Click **AWS Service**, And Then Click **Choose a service or use case**
 <br/>
 <br/> 
 
-<img width="1670" alt="Screenshot 2024-01-10 at 1 57 20 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/b5cb0173-9cf4-406e-8abd-915dba1680d2">
+<img width="1670" alt="Screenshot 2024-01-10 at 1 57 20 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/7a49baaf-9df0-4f74-a10a-e1abcea86885">
 
 <br/>
 
@@ -79,7 +79,7 @@ Now Click **EC2** and Click **NEXT**
 
 <br/>
 
-<img width="1624" alt="Screenshot 2024-01-10 at 1 58 03 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/da3fe367-302b-48f7-a9b0-97fe3abf948a">
+<img width="1624" alt="Screenshot 2024-01-10 at 1 58 03 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/a2a59d66-135c-45fc-bed7-a62db0246be5">
 
 <br/> 
 <br/>
@@ -88,7 +88,7 @@ Click the **Search** Fileds, Then Add permissions Policies
 
 <br/>
 
-<img width="1652" alt="Screenshot 2024-01-10 at 2 16 39 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/0a30570f-cb17-4317-a34b-8fb72ccfa141">
+<img width="1652" alt="Screenshot 2024-01-10 at 2 16 39 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/1a761f3d-1529-49b5-a911-672dd51885cc">
 
 <br/> 
 <br/>
@@ -98,11 +98,14 @@ Add These **Three Policies**:
 1.  EC2 full access
 2.  AmazonS3FullAccess
 3.  AmazonEKSClusterPolicy
+
    
+<img width="1449" alt="Screenshot 2024-01-10 at 2 07 27 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/404bd3a1-8306-44b7-b880-2789bc333af8">
+
 <br/> 
 <br/> 
 
-<img width="1449" alt="Screenshot 2024-01-10 at 2 07 27 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/4db00b93-e786-42f4-82f1-5a316a883ae1">
+<img width="1449" alt="Screenshot 2024-01-10 at 2 07 27 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/059c5dc2-a73c-4adf-ab70-e943df276f66">
 
 <br/> 
 
@@ -114,7 +117,7 @@ Click **Create role**
 
 <br/> 
 
-<img width="1671" alt="Screenshot 2024-01-10 at 2 07 55 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/7358906e-c95c-466b-8646-75b994e09efa">
+<img width="1671" alt="Screenshot 2024-01-10 at 2 07 55 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/eceb084b-ebf7-448c-9dcb-422412d3ea2b">
 
 <br/> 
 <br/> 
@@ -128,8 +131,9 @@ To launch an AWS EC2 instance running Ubuntu 22.04 via the AWS Management Consol
 <br/> 
 <br/> 
 
-<img width="1496" alt="Screenshot 2024-01-10 at 5 40 06 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/00381dad-5aaf-4aa9-a36b-ac7c933c8db2">
-<img width="1496" alt="Screenshot 2024-01-10 at 5 40 41 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/19822539-ca4f-4082-8a91-b4b6a3083cb7">
+<img width="1496" alt="Screenshot 2024-01-10 at 5 40 06 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/82726782-2ba8-4913-a14d-3cf4cafdcc33">
+
+<img width="1496" alt="Screenshot 2024-01-10 at 5 40 25 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/a6bac162-eb7a-4f3e-b845-0e1adce8a690">
 
 
 
@@ -138,12 +142,13 @@ Now Go to GitHub Repository and  click on **Settings -> Actions -> Runners**
 
 Click on New self-hosted runner
 
-<img width="1134" alt="Screenshot 2024-01-10 at 1 35 16 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/d850fa22-fbf6-436d-931a-3d117cf9209f">
+<img width="1134" alt="Screenshot 2024-01-10 at 1 35 16 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/0e79f558-b4b2-4a24-8251-7e209e728681">
+
 
 
 <br/>
 
-<img width="1496" alt="Screenshot 2024-01-10 at 5 50 48 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/e2a9b727-10f3-4216-8bf5-e9c06b1d69dc">
+<img width="1496" alt="Screenshot 2024-01-10 at 5 50 48 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/2b8f00f7-9a32-468a-b57a-6ff024dc8984">
 
 <br/> 
 
