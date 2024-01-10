@@ -349,29 +349,37 @@ Name: SONAR_TOKEN
 
 Secret: Paste Your Token and click on Add secret
 
-<img width="1250" alt="Screenshot 2024-01-10 at 8 05 26 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/72e9053a-0fd4-46fd-9476-cee3f642c211">
+<img width="1250" alt="Screenshot 2024-01-10 at 8 05 26 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/e930e589-92f9-48f9-a800-6d38f96f451e">
+
 
 Now go back to the Sonarqube Dashboard
 
 Copy the Name and Value
-<img width="1276" alt="Screenshot 2024-01-10 at 8 06 09 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/00d0a056-e33a-413c-bd69-47249e26fe1c">
+
+<img width="1276" alt="Screenshot 2024-01-10 at 8 06 09 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/d53b22d4-8224-4a09-8e85-5223e7e0614d">
 
 Go to GitHub now and paste-like this and click on add secret
 
-<img width="1229" alt="Screenshot 2024-01-10 at 8 07 25 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/4d519e35-bb51-45b9-84da-899830a47658">
+<img width="1229" alt="Screenshot 2024-01-10 at 8 07 25 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/a856f7f0-161d-410d-895b-53166bd396a0">
+
+
 
 Our Sonarqube secrets are added and you can see it.
 
-<img width="1220" alt="Screenshot 2024-01-10 at 8 07 57 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/7db62bfd-519b-4106-9d5e-df9ef1dc1d60">
+
+<img width="1220" alt="Screenshot 2024-01-10 at 8 07 57 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/68bdeb7e-e3f6-43d2-8c56-f6e2738716e2">
+
 
 
 Go to Sonarqube Dashboard and click on continue
 
-<img width="1266" alt="Screenshot 2024-01-10 at 8 08 32 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/65f44332-fd89-45fd-bcee-d6bcf54092fb">
+<img width="1272" alt="Screenshot 2024-01-10 at 8 09 43 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/c759439e-8116-4c43-a32f-7e9881a0dcf5">
+
 
 Now create your Workflow for your Project. In my case, I am using React Js. That's why I am selecting Other.
 
-<img width="1272" alt="Screenshot 2024-01-10 at 8 09 43 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/c0c1a1ba-2873-4797-b891-a22385030b9f">
+<img width="1272" alt="Screenshot 2024-01-10 at 8 09 43 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/f87fc350-9566-433a-a375-192cd8ab9d9d">
+
 
 Now it Generates and workflow for my Project
 
@@ -379,21 +387,25 @@ Now it Generates and workflow for my Project
 
 Go back to GitHub. click on Add file and then create a new file
 
-<img width="1263" alt="Screenshot 2024-01-10 at 8 10 25 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/766d6d86-3ab0-4fff-9021-53450b07b29b">
+<img width="1263" alt="Screenshot 2024-01-10 at 8 10 25 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/182c70e7-d440-4c4c-9cbb-19dde5d88abd">
+
 
 Go back to the Sonarqube dashboard and copy the file name and content
 
-<img width="916" alt="Screenshot 2024-01-10 at 8 12 07 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/3e7509fa-6af7-4880-b9b4-1299f9011531">
+<img width="916" alt="Screenshot 2024-01-10 at 8 12 07 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/b1812f28-f682-46d0-b46c-68f81affdcbb">
+
 
 Add in GitHub like this (Look at image)
 
-<img width="1267" alt="Screenshot 2024-01-10 at 8 13 31 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/0f36dac1-5d79-4ca8-93db-da463e6c701f">
+<img width="1267" alt="Screenshot 2024-01-10 at 8 13 31 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/3d2b49ef-67be-4b32-a010-6e5b34cbfaa7">
+
 
 Let's add our workflow
 
 To do that click on Add file and then click on Create a new file
 
-<img width="1263" alt="Screenshot 2024-01-10 at 8 10 25 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/d13fccbf-e580-4fab-b1bc-35eabfa01991">
+<img width="1263" alt="Screenshot 2024-01-10 at 8 10 25 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/dcb600be-e92f-466c-8b98-99c88cb6059e">
+
 
 Here is the file name
 
@@ -401,9 +413,13 @@ Here is the file name
 .github/workflows/sonar.yml  #you can use any name I am using sonar.yml
 ```
 
-<img width="992" alt="Screenshot 2024-01-10 at 8 16 17 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/21c18913-6d2c-406c-9b47-a3fe61f5d5cd">
+<img width="1267" alt="Screenshot 2024-01-10 at 8 13 31 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/27e2ca2a-283f-46ee-87d8-d16f3e575d97">
+
 
 Copy content and add it to the file
+
+<img width="992" alt="Screenshot 2024-01-10 at 8 16 17 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/4a733d20-d012-46bc-a374-bf633f545836">
+
 
 ```bash
 name: Build,Analyze,scan
@@ -434,7 +450,8 @@ jobs:
 
 Click on commit changes
 
-<img width="1270" alt="Screenshot 2024-01-10 at 8 16 59 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/6ea933ba-fdff-4a98-bcbb-d18c9250dd96">
+<img width="1270" alt="Screenshot 2024-01-10 at 8 16 59 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/ae20cee1-355e-4de4-be62-3217923e6ecd">
+
 
 
 Now workflow is created.
@@ -452,23 +469,26 @@ Click on Actions now
 
 Now it's automatically started the workflow
 
-<img width="972" alt="Screenshot 2024-01-10 at 8 19 23 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/bc534840-518f-4db6-bc9c-e39f38afe358">
+<img width="972" alt="Screenshot 2024-01-10 at 8 19 23 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/a74f8c0d-42f3-4aa2-99e5-d6dd6a3b64e4">
+
 
 
 Let's click on Build and see what are the steps involved
 
-<img width="1121" alt="Screenshot 2024-01-10 at 8 20 55 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/ab4cd711-8882-4dfe-ab75-95038bb44033">
+<img width="1121" alt="Screenshot 2024-01-10 at 8 20 55 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/1a1c6a99-c6cd-457c-8697-33a205ba834a">
 
 
 Click on Run Sonarsource and you can do this after the build completion
 
-<img width="775" alt="Screenshot 2024-01-10 at 8 22 19 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/4ff72b8a-ff74-4012-afcb-8236364a2480">
+<img width="775" alt="Screenshot 2024-01-10 at 8 22 19 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/b598f61d-b27e-4a0a-abbf-8f0232befdbe">
+
 
 Build complete.
 
 Go to the Sonarqube dashboard and click on projects and you can see the analysis
 
-<img width="1278" alt="Screenshot 2024-01-10 at 8 23 26 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/89b3fa85-a3f5-479b-89fe-9c8ad38bcb1b">
+<img width="1278" alt="Screenshot 2024-01-10 at 8 23 26 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/52a8dd42-4c53-4a65-844e-d8a333d6ac6d">
+
 
 If you want to see the full report, click on issues.
 
@@ -572,7 +592,8 @@ Now initialize the terraform.
 terraform init
 ```
 
-<img width="1095" alt="Screenshot 2024-01-10 at 9 51 07 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/b6a64078-8a87-4ba6-b846-815f0fab072c">
+<img width="1095" alt="Screenshot 2024-01-10 at 9 51 07 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/e008ec6a-504c-411d-8d54-5c65267363bd">
+
 
 
 Now validate the configurations and syntax of all files.
@@ -581,7 +602,8 @@ Now validate the configurations and syntax of all files.
 terraform validate
 ```
 
-<img width="605" alt="Screenshot 2024-01-10 at 9 54 29 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/cb1fe8e9-3b9e-499e-9010-6fa16a9b8c70">
+<img width="605" alt="Screenshot 2024-01-10 at 9 54 29 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/718f9727-1c43-4792-a916-77a15fd3f120">
+
 
 Now Plan and apply your infrastructure.
 
@@ -590,13 +612,18 @@ terraform plan
 terraform apply
 ```
 
-<img width="1204" alt="Screenshot 2024-01-10 at 9 57 37 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/1bebcfd9-d57a-453b-8983-e19685ae6661">
+<img width="1204" alt="Screenshot 2024-01-10 at 9 57 37 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/852e41d3-7507-40d7-a51f-a8ed09b21a2b">
+
 
 It can take up to 10 Minutes to create your AWS EKS cluster.
 
 You can check by going to aws EKS service.
 
+<img width="1213" alt="Screenshot 2024-01-10 at 10 14 31 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/0a391216-66c4-4a2b-81c6-af9ca89da27b">
+
 Also, check your Node Grpup EC2 Instance, by going to EC2 Dashboard.
+
+<img width="1256" alt="Screenshot 2024-01-10 at 10 15 25 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/bfc92120-34b8-441f-b9f6-4d59ead699d9">
 
 # Coming Soon
 
