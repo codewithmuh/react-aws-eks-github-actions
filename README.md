@@ -1,4 +1,4 @@
-# Deploy React Applications on AWS EKS using GitHub Actions and Terraform.
+<img width="639" alt="Screenshot 2024-01-10 at 6 38 58 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/53b574c2-3c8a-4e5a-92c9-052db3101b1d"># Deploy React Applications on AWS EKS using GitHub Actions and Terraform.
 We plan to utilize GitHub Actions and Terraform to deploy our React project on AWS EKS.
 ![readme (10)](https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/a45ea7e5-7c6b-4209-b06f-ac957aa4f5b9)
 
@@ -154,23 +154,26 @@ Click on New self-hosted runner
 
 Now select Linux and Architecture X64
 
-<img width="1496" alt="Screenshot 2024-01-10 at 5 54 09 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/95aa24b2-5090-43f2-92c6-d743ae588ebd">
+<img width="1496" alt="Screenshot 2024-01-10 at 5 54 09 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/508da348-e371-48e1-be9d-b6d042970470">
+
 
 Use the below commands to add a self-hosted runner
 
 **Note:** In pic Commads are related to my account, Use your commands, it appears on your GitHub  self-hosted runner Page. 
 
-<img width="1496" alt="Screenshot 2024-01-10 at 5 55 47 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/09c52dc0-b2b0-45ba-9375-9758bcce48aa">
+<img width="1496" alt="Screenshot 2024-01-10 at 5 55 47 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/3a142431-ec5e-4bff-8924-2ae7900deb11">
 
 
-Now SSH to your AWS Instac3e to connect with your Instance.
+
+Now SSH to your AWS instance to connect with your Instance.
 
 And Past/Run these commands.
 
   ```bash
   mkdir actions-runner && cd actions-runner
   ```
-<img width="765" alt="Screenshot 2024-01-10 at 6 02 16 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/d1701fd1-fe05-446d-8759-927d64c81d76">
+<img width="765" alt="Screenshot 2024-01-10 at 6 02 16 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/ac459382-abc1-447b-a1aa-b54ac164db5e">
+
 
 Command "mkdir actions-runner && cd actions-runner" serves to generate a fresh directory named "actions-runner" within the present working directory. Subsequently, it swiftly switches the current working directory to this newly created "actions-runner" directory. This approach streamlines file organization and facilitates executing successive actions within the newly formed directory without the need for separate navigation.
 
@@ -180,7 +183,8 @@ Download the latest runner package
 curl -o actions-runner-linux-x64-2.311.0.tar.gz -L https://github.com/actions/runner/releases/download/v2.311.0/actions-runner-linux-x64-2.311.0.tar.gz
 ```
 
-<img width="942" alt="Screenshot 2024-01-10 at 6 07 25 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/af67a190-54d8-4fb6-8f58-28a04253a452">
+<img width="942" alt="Screenshot 2024-01-10 at 6 07 25 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/4629710b-6bdf-4012-b9c3-8899cf8a9e51">
+
 
 Validate the hash.
 
@@ -188,7 +192,8 @@ Validate the hash.
 echo "29fc8cf2dab4c195bb147384e7e2c94cfd4d4022c793b346a6175435265aa278  actions-runner-linux-x64-2.311.0.tar.gz" | shasum -a 256 -c
 ```
 
-<img width="937" alt="Screenshot 2024-01-10 at 6 10 55 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/963edd64-b96b-49f0-b7c7-2de0a37b370b">
+<img width="937" alt="Screenshot 2024-01-10 at 6 10 55 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/fa9890c6-3b20-48fe-9275-2b2a94964219">
+
 
 Now Extract the installer
 
@@ -201,7 +206,8 @@ Create the runner and start the configuration experience
 ```bash
 ./config.sh --url https://github.com/codewithmuh/react-aws-eks-github-actions --token AMFXNTP3IVE6IAZSWO3ZEGDFT2QV6
 ```
-<img width="926" alt="Screenshot 2024-01-10 at 6 16 09 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/6710c4bc-5086-47ca-8a88-29d641b79100">
+
+<img width="926" alt="Screenshot 2024-01-10 at 6 16 09 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/e46f9064-2b21-4179-b9af-06406b1d0f1b">
 
 
 If you have provide multiple labels use commas for each label.
@@ -211,7 +217,8 @@ The last step, run it!
 ```bash
 ./run.sh
 ```
-<img width="613" alt="Screenshot 2024-01-10 at 6 17 33 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/769cd052-4900-4f27-b8f5-9babe389e252">
+<img width="613" alt="Screenshot 2024-01-10 at 6 17 33 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/c522bc91-d861-4349-84cf-3500788dbae4">
+
 
 Let's close Runner for now.
 
@@ -243,16 +250,19 @@ Now We will Pull SonarQube Docker Image and run the SonarQube Container.
 docker run -d --name sonar -p 9000:9000 sonarqube:lts-community
 ```
 
-<img width="947" alt="Screenshot 2024-01-10 at 6 31 19 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/06cdb226-6312-416e-9489-c6ddb7bf373d">
+<img width="947" alt="Screenshot 2024-01-10 at 6 31 19 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/6b8e9af9-369c-4d19-b1ac-0fdd9d24e136">
 
-<img width="953" alt="Screenshot 2024-01-10 at 6 32 50 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/eb8e39f1-3550-4dcf-8426-ab22fcad59bf">
+
+<img width="953" alt="Screenshot 2024-01-10 at 6 32 50 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/710edbed-5093-4411-97e2-2a365b8eade5">
+
 
 Now copy the IP address of Your EC2 instance
 
 ```bash
 <EC2-PUBLIC-IP:9000>
 ```
-<img width="625" alt="Screenshot 2024-01-10 at 6 36 04 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/836984b6-f96e-43c9-92ef-9a15f8e5693b">
+
+<img width="625" alt="Screenshot 2024-01-10 at 6 36 04 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/57782074-5a76-42e5-81bf-a34d7e4189a2">
 
 Now Login with these creds.
 
@@ -263,61 +273,74 @@ password admin
 
 Now Update your Sonarqube password.
 
-<img width="639" alt="Screenshot 2024-01-10 at 6 38 58 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/80679eb3-fc4d-4620-93d7-fce3674e8a10">
+
+<img width="639" alt="Screenshot 2024-01-10 at 6 38 58 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/c2638f04-5df8-489c-8746-ebf65fa874fa">
+
 
 
 This is the Sonarqube dashboard.
 
-<img width="1269" alt="Screenshot 2024-01-10 at 6 40 16 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/2154577b-c0d0-4ece-a95d-6950979c00e4">
+<img width="1269" alt="Screenshot 2024-01-10 at 6 40 16 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/e0dcf4a0-2697-4829-aab1-fbd8ffdd17a5">
+
 
 ### Step 04: Integrate SonarQube with GitHub Actions
 Integrating SonarQube with GitHub Actions allows you to automatically analyze your code for quality and security as part of your continuous integration pipeline.We already have Sonarqube up and running
 
 Now On Sonarqube Dashboard click on Manually
 
-<img width="1279" alt="Screenshot 2024-01-10 at 6 42 53 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/d8b4ef49-1a27-46a3-a98b-864e14ac9077">
+<img width="1279" alt="Screenshot 2024-01-10 at 6 42 53 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/6a836594-a32d-430c-8ac5-1fd07a406fa8">
+
 
 On the Next Page, You have to provide the name of your project and provide a branch name. The Click on SetUp Button.
 
-<img width="1269" alt="Screenshot 2024-01-10 at 6 44 58 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/865c5671-23e9-4144-8fa3-49c936cbcba7">
+<img width="1269" alt="Screenshot 2024-01-10 at 6 44 58 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/2f705b5c-5ba1-48d9-b1fd-47d6b7e9dcd5">
+
 
 On the Next Page, You have to click on "With GitHub Actions"
 
-<img width="1277" alt="Screenshot 2024-01-10 at 6 47 12 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/cd0c30ee-bf80-4f46-acce-6d66ce8beff6">
+<img width="1277" alt="Screenshot 2024-01-10 at 6 47 12 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/2e4308d9-c4fe-4087-850b-0ca36a261331">
+
 
 This will provide an overview of the project and provide some instructions to integrate.
 
-<img width="1277" alt="Screenshot 2024-01-10 at 6 49 02 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/ace9100e-f2c0-417a-bf14-c24b845b721b">
+<img width="1277" alt="Screenshot 2024-01-10 at 6 49 02 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/9f36e302-13da-4305-acff-f6425a529040">
+
 
 Now Let's open your Giuthub Repository. 
 
 Now Click on Settings. (if you are using my repo, make sure you have forked it)
 
-<img width="1280" alt="Screenshot 2024-01-10 at 7 34 09 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/3cbf4def-3fd6-4a8c-8cef-b74b0c1ec747">
+<img width="1280" alt="Screenshot 2024-01-10 at 7 34 09 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/6918bada-4af9-4ef3-8aa1-acfcdc427365">
+
 
 
 Click on Secrets and variables and then click on actions.
 
-<img width="1277" alt="Screenshot 2024-01-10 at 7 40 03 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/118bc70b-8155-4ed4-b730-7d5932381f90">
+<img width="1277" alt="Screenshot 2024-01-10 at 7 40 03 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/ce27fcd5-0058-4e07-b4d4-f7de73b2413e">
+
 
 It will open a page, Clock on **New Repository secret**.
 
-<img width="1278" alt="Screenshot 2024-01-10 at 7 41 05 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/9e48bf2c-62e4-4bbb-bcc3-668e5c2e2584">
+<img width="1278" alt="Screenshot 2024-01-10 at 7 41 05 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/73e15994-2ef0-4bb3-90ff-c389bb1868d1">
+
 
 Now Go to your Sonarqube dashboard
 
 Copy SONAR_TOKEN and click on Generate Token
 
-<img width="1270" alt="Screenshot 2024-01-10 at 8 00 42 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/dbfbd234-d6aa-4803-afe9-f61421f87c38">
+<img width="1270" alt="Screenshot 2024-01-10 at 8 00 42 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/2afb8ebf-96e1-4446-997a-5bf0dbc2da80">
+
 
 Click on Generate
 
-<img width="705" alt="Screenshot 2024-01-10 at 8 02 41 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/58cc56e6-caeb-4690-ab3d-fca596082372">
+<img width="705" alt="Screenshot 2024-01-10 at 8 02 41 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/1dd5bb1c-3f32-4214-89ea-2d0110fb79ed">
+
 
 
 Let's copy the Token and add it to GitHub secrets
 
-<img width="835" alt="Screenshot 2024-01-10 at 8 03 34 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/a793ca5d-381a-40b2-ae78-cb473aa0ee37">
+
+<img width="835" alt="Screenshot 2024-01-10 at 8 03 34 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/6d2145b5-b73e-4e3e-b910-9ebdbabe12e8">
 
 
 Now Go back to GitHub and Paste the copied name for the secret and token
