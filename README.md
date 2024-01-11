@@ -778,7 +778,9 @@ Note: Make sure port 3000 is added on your Ec2.
 "Your_EC2_IP:3000"
 ```
 
-If its not working, Try to pull image on your system and check errors. Fix them then build the github actions again.
+<img width="1496" alt="Screenshot 2024-01-11 at 5 27 04 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/9e777278-d9c9-438a-9d41-086f558ac1f6">
+
+If it's not working, Try to pull an image on your system and check for errors. Fix them then build the GitHub actions again.
 
 ### Part 08: Deploy Application(image) to AWS EKS
 
