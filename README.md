@@ -5,6 +5,9 @@ We plan to utilize GitHub Actions and Terraform to deploy our React project on A
 ## Overview:
 We will deploy React Application on aws Elastic Kubernetes(EKS). We will use Github actions for the ci/cd pipeline. We will use EC2 as the self-hosted runner for our GitHub Actions. We will integrate Sonarcube for code analysis and Trivt Image scan to scan our docker images. Also, we will integrate Slack to get Build/deployment notifications.
 
+## Support
+<a href="https://www.buymeacoffee.com/codewithmuh" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-yellow.png" alt="Buy Me A Coffee" height="41" width="174"></a>
+
 ### Prerequisite
 You should have basic Knowledge of AWS services, Docker, Kubernetes, and GitHub Actions.
 
@@ -940,8 +943,12 @@ cd terraform-eks
 terraform destroy --auto-approve
 ```
 
-Then Delete ths dockerhub token. Once cluster is destroyed, delete the ec2 instance and i am role.
-# Coming Soon
+Then Delete ths dockerhub token. Once cluster is destroyed, delete the ec2 instance and iam role.
+
+
+## Acknowledgements
+Special thanks to codewithmuh for creating this incredible Devops Project and simplifying the CI/CD process.
+
 
 
 
