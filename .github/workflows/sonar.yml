@@ -1,4 +1,4 @@
-name: Sonar Code Rewview
+name: Sonar Code Review Workflow
 
 on:
   push:

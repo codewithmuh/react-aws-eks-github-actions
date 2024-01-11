@@ -1,10 +1,11 @@
-name: Code Build
+name: Code Build Workflow
 
 on:
-  push:
-    branches:
-      - main
-
+    workflow_run:
+      workflows: ["Sonar Code Review Workflow"]
+      types:
+        - completed
+        
 jobs:
   build:
     name: Build

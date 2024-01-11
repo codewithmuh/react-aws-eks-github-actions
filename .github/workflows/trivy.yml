@@ -1,13 +1,10 @@
-name: Trivy Image Scan
+name: Trivy Image Scan Workflow
 
 on:
     workflow_run:
-      workflows: ["Code Build"]
+      workflows: ["Sonar Code Review Workflow", "Code Build Workflow"]
       types:
         - completed
-    push:
-      branches:
-        - main
   
 jobs:
     build:
@@ -16,9 +13,6 @@ jobs:
       steps:
         - name: Checkout Repository
           uses: actions/checkout@v2
-
-        - name: Delay for 5 minutes To make sure our latest Images is pushed to dockerhub, Then We Pull.
-          run: sleep 300 # 5 minutes delay
 
         - name: Pull the Docker image
           run: docker pull codewithmuh/react-aws-eks-github-actions:latest
