@@ -420,6 +420,35 @@ Here is the file name
 
 Copy content and add it to the file
 
+```bash
+name: Sonar Code Review Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+
+jobs:
+  build:
+    name: Build
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+      - uses: sonarsource/sonarqube-scan-action@master
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+      # If you wish to fail your job when the Quality Gate is red, uncomment the
+      # following lines. This would typically be used to fail a deployment.
+      # - uses: sonarsource/sonarqube-quality-gate-action@master
+      #   timeout-minutes: 5
+      #   env:
+      #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+```
+
 <img width="992" alt="Screenshot 2024-01-10 at 8 16 17 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/4a733d20-d012-46bc-a374-bf633f545836">
 
 
@@ -633,6 +662,69 @@ Also, check your Node Grpup EC2 Instance, by going to EC2 Dashboard.
 Now you have to create a Personal Access token for your Dockerhub account.
 
 Go to docker hub and click on your profile --> Account settings --> security --> New access token
+
+Now create a new workflow with name build.yaml . Make sure to replace username and image name with yours.
+
+```bash
+name: Code Build Workflow
+
+on:
+    workflow_run:
+      workflows: 
+        - Sonar Code Review Workflow
+      types:
+        - completed
+        
+jobs:
+  build:
+    name: Build
+    runs-on: self-hosted
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Docker build and push
+        run: |
+          docker build -t react-aws-eks-github-actions .
+          docker tag react-aws-eks-github-actions codewithmuh/react-aws-eks-github-actions:latest
+          docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
+          docker push codewithmuh/react-aws-eks-github-actions:latest
+        env:
+          DOCKER_CLI_ACI: 1
+```
+
+Now add another Workflow for dpcker image scan, use name 'trivy.yml'. Use the conetnt below, but make sure to repalce image with your one.
+
+
+```bash
+name: Trivy Image Scan Workflow
+
+on:
+    workflow_run:
+      workflows: 
+        - Code Build Workflow
+      types:
+        - completed
+  
+jobs:
+    build:
+      name: Docker Image Scan
+      runs-on: self-hosted
+      steps:
+        - name: Checkout Repository
+          uses: actions/checkout@v2
+
+        - name: Pull the Docker image
+          run: docker pull codewithmuh/react-aws-eks-github-actions:latest
+
+  
+        - name: Trivy image scan
+          run: trivy image codewithmuh/react-aws-eks-github-actions:latest
+
+```
+
+Here is output of build.
+
 
 ### Part 08: Deploy Application(image) to AWS EKS
 
