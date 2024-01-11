@@ -925,6 +925,22 @@ Here is the Output: The website is Live.
 
 ### Part 10: Delete the infrastructure (To Avoid Extra Billing, if you are just using it for learning Purposes)
 
+To destroy, Follow these Steps:
+
+1. comment this line run: kubectl apply -f deployment-service.yml in deploy.yaml, adn add this line run: kubectl delete -f deployment-service.yml . You can say it replacement between lines. It will delete the container and delete the Kubernetes deployment.
+
+2. Stop the self-hosted runner.
+
+3. To delete the Eks cluster
+   
+```bash
+cd /home/ubuntu
+cd Project_root_folder
+cd terraform-eks
+terraform destroy --auto-approve
+```
+
+Then Delete ths dockerhub token. Once cluster is destroyed, delete the ec2 instance and i am role.
 # Coming Soon
 
 
