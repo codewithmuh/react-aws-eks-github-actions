@@ -750,6 +750,35 @@ Here is the output of the build.
 
 <img width="1496" alt="Screenshot 2024-01-11 at 4 51 28 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/5f5315e3-74d5-4490-9b7b-17c2b69fb32f">
 
+```bash
+
+Now add these lines into build.yml steps, so we can test image on our aws ec2 instance.
+
+   - name: Pull the Docker image On AWS EC2 For Testing
+        run: docker pull sevenajay/tic-tac-toe:latest
+      
+
+      - name: Stop and remove existing container
+        run: |
+            docker stop react-aws-eks-github-actions || true
+            docker rm react-aws-eks-github-actions || true
+  
+      - name: Run the container on AWS EC2 for testing
+        run: docker run -d --name react-aws-eks-github-actions -p 3000:3000 codewithmuh/react-aws-eks-github-actions:latest
+  
+
+```
+
+When Build is completed , visit the websiet in your browser.
+
+Note: Make sure port 3000 is added on your Ec2.
+
+
+```bash
+"Your_EC2_IP:3000"
+```
+
+If its not working, Try to pull image on your system and check errors. Fix them then build the github actions again.
 
 ### Part 08: Deploy Application(image) to AWS EKS
 

@@ -1,5 +1,5 @@
 {
-  "name": "react-aws-eks-github-actions",
+  "name": "react-aws-github-actions",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
