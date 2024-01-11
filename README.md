@@ -21,7 +21,7 @@ You should have basic Knowledge of AWS services, Docker, Kubernetes, and GitHub 
 
 **6.** Provision AWS EKS With Terraform
 
-**7.** Create Deploy Workflow on GitHub  Actions and attach Trivy Image Scan & Docker Hub
+**7.** Dockerhub and Trivy Image Scan Setup
 
 **8.** Deploy Application(image) to AWS EKS
 
@@ -628,28 +628,11 @@ Also, check your Node Grpup EC2 Instance, by going to EC2 Dashboard.
 <img width="1256" alt="Screenshot 2024-01-10 at 10 15 25 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/bfc92120-34b8-441f-b9f6-4d59ead699d9">
 
 
-### Part 07: Create Deploy Workflow on GitHub  Actions and attach Trivy Image Scan & Docker Hub
+### Part 07: Dockerhub and Trivy Image Scan Setup
 
-Let's create a new workflow with the name 'deploy'  in '.github/workflow'. 
+Now you have to create a Personal Access token for your Dockerhub account.
 
-Add these lines to your workflow.
-
-```bash
-name: NPM Install
-  run: npm install # Add your specific npm install command
-
-name: Install Trivy
-  run: |
-    # Scanning files
-    trivy fs . > trivyfs.txt
-
-
-```
-
-This will install npm dependencies. In another step, it runs Trivy to scan files. It scans the current directory (denoted by .) and saves the output to a file named trivyfs.txt.
-
-Now commit this. And check the workflow by going into the Github actions tab.
-
+Go to docker hub and click on your profile --> Account settings --> security --> New access token
 
 ### Part 08: Deploy Application(image) to AWS EKS
 
