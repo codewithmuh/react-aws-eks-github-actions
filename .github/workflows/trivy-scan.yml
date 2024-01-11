@@ -16,13 +16,13 @@ jobs:
         with:
           fetch-depth: 0  # Shallow clones should be disabled for better relevancy of analysis
 
+      - name: NPM Install
+        run: npm install # Add your specific npm install command
+
       - name: Install trivy
         run: |
-            sudo apt-get update
-            sudo apt-get install -y wget apt-transport-https gnupg lsb-release
-            wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | sudo gpg --dearmor -o /usr/share/keyrings/trivy-archive-keyring.gpg
-            echo 'deb [signed-by=/usr/share/keyrings/trivy-archive-keyring.gpg] https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -cs) main' | sudo tee /etc/apt/sources.list.d/trivy.list > /dev/null
-            sudo apt-get update
-            sudo apt-get install -y trivy
-        
-        
+          sudo apt-get update
+          sudo apt-get install -y trivy
+
+      - name: Scan with Trivy
+        run: trivy fs . > trivyfs.txt
