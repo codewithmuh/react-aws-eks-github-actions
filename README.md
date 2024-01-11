@@ -21,13 +21,15 @@ You should have basic Knowledge of AWS services, Docker, Kubernetes, and GitHub 
 
 **6.** Provision AWS EKS With Terraform
 
-**7.** Deploy Application(image) to AWS EKS
+**7.** Create Deploy Workflow on GitHub  Actions and attach Trivy Image Scan & Docker Hub
 
-**8.** Integrate Slack Notifications
+**8.** Deploy Application(image) to AWS EKS
 
-**9.** Running Final/Complete Github actions Workflow
+**9.** Integrate Slack Notifications
 
-**10.** Delete the infrastructure (To Avoid Extra Billing, if you are just using it for learning Purposes)
+**10.** Running Final/Complete Github actions Workflow
+
+**11.** Delete the infrastructure (To Avoid Extra Billing, if you are just using it for learning Purposes)
 
 ### Step 01:  Create an AWS EC2 Instance and an IAM Role 
 
