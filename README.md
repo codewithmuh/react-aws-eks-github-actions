@@ -627,6 +627,17 @@ Also, check your Node Grpup EC2 Instance, by going to EC2 Dashboard.
 
 <img width="1256" alt="Screenshot 2024-01-10 at 10 15 25 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/bfc92120-34b8-441f-b9f6-4d59ead699d9">
 
+
+### Part 07: Create Deploy Workflow on GitHub  Actions and attach Trivy Image Scan & Docker Hub
+
+### Part 08: Deploy Application(image) to AWS EKS
+
+### Part 09: Integrate Slack Notifications
+
+### Part 10: Running Final/Complete Github actions Workflow
+
+### Part 11: Delete the infrastructure (To Avoid Extra Billing, if you are just using it for learning Purposes)
+
 # Coming Soon
 
 
