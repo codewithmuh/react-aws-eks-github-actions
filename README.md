@@ -906,6 +906,23 @@ And here is the Slack notification.
 <img width="1167" alt="Screenshot 2024-01-11 at 9 14 47 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/9bea4559-64f0-49db-8054-6b57ba7583b6">
 
 
+Let’s go to the Ec2 ssh connection
+
+Rn this command.
+
+```bash
+kubectl get all
+```
+
+Open the port in the security group for the Node group instance.
+
+After that copy the external IP and paste it into the browser
+<img width="1419" alt="Screenshot 2024-01-11 at 9 23 10 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/9a6ac287-90de-451e-bc85-af71c35d5f51">
+
+Here is the Output: The website is Live.
+
+<img width="1377" alt="Screenshot 2024-01-11 at 9 23 35 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/dec57ac6-922e-4803-b30c-224264129227">
+
 ### Part 10: Delete the infrastructure (To Avoid Extra Billing, if you are just using it for learning Purposes)
 
 # Coming Soon
