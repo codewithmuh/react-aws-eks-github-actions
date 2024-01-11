@@ -892,7 +892,9 @@ Add the below code to the deploy.yml workflow and commit and the workflow will s
 This step sends a Slack notification. It uses the act10ns/slack action and is configured to run "always," which means it runs regardless of the job status. It sends the notification to the specified Slack channel using the webhook URL stored in secrets.
 
 
-If you get this error, Try to configure aws cli on ec2 instance to resolsve this matter.
+If you get this error, Try to configure aws cli on the ec2 instance to resolve this matter.
+
+<img width="1355" alt="Screenshot 2024-01-11 at 8 57 56 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/9f83d0e3-81b8-49a0-82ec-8e3d54f63c6e">
 
 
 ### Part 10: Delete the infrastructure (To Avoid Extra Billing, if you are just using it for learning Purposes)
