@@ -663,7 +663,23 @@ Now you have to create a Personal Access token for your Dockerhub account.
 
 Go to docker hub and click on your profile --> Account settings --> security --> New access token
 
-Now create a new workflow with name build.yaml . Make sure to replace username and image name with yours.
+<img width="1496" alt="Screenshot 2024-01-11 at 3 14 48 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/0eda48fe-8846-44e5-8d31-9484bc89801c">
+
+<img width="1728" alt="Screenshot 2024-01-11 at 3 16 47 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/01387808-b200-4ba1-bba8-a5c2504d3a15">
+
+Copy This Token.
+
+<img width="1728" alt="Screenshot 2024-01-11 at 3 17 22 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/0d04f726-5db6-4926-af08-ccefc4e5ac8d">
+
+Add this Token to your Github actions Secret.
+
+<img width="1728" alt="Screenshot 2024-01-11 at 3 19 28 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/aa180559-88aa-4518-be58-88066b4e49b9">
+
+Also, add another secret of your dockerhub username.
+
+<img width="1724" alt="Screenshot 2024-01-11 at 3 20 09 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/0d0a87dd-e0e5-4174-809b-1b2b3d277f57">
+
+Now create a new workflow with the name build.yaml . Make sure to replace the username and image name with yours.
 
 ```bash
 name: Code Build Workflow
@@ -693,7 +709,14 @@ jobs:
           DOCKER_CLI_ACI: 1
 ```
 
-Now add another Workflow for dpcker image scan, use name 'trivy.yml'. Use the conetnt below, but make sure to repalce image with your one.
+<img width="1728" alt="Screenshot 2024-01-11 at 3 34 04 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/49d0962d-001b-4d25-928a-6b9691ad5007">
+
+Now you can check image is pushed to your Dockerhub Account.
+
+<img width="1724" alt="Screenshot 2024-01-11 at 3 34 29 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/2ebb27ab-7d21-4fa5-8a08-8382ca83f132">
+
+
+Now add another Workflow for the docker image scan, using the name 'trivy.yml'. Use the content below, but make sure to replace the image with your one.
 
 
 ```bash
@@ -723,7 +746,9 @@ jobs:
 
 ```
 
-Here is output of build.
+Here is the output of the build.
+
+<img width="1496" alt="Screenshot 2024-01-11 at 4 51 28 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/5f5315e3-74d5-4490-9b7b-17c2b69fb32f">
 
 
 ### Part 08: Deploy Application(image) to AWS EKS
