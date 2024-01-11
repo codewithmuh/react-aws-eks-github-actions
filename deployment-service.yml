@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: react-aws-eks-github-actions
-        image: codewithmuh/react-aws-eks-github-actions
+        image: codewithmuh/react-aws-eks-github-actions:latest
         ports:
         - containerPort: 3000   # Use port 3000
 

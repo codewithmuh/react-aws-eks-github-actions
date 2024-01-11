@@ -25,7 +25,7 @@ jobs:
           DOCKER_CLI_ACI: 1
 
 
-      - name: Pull the Docker image On AWS EC2 For Testing
+      - name: Pull the Docker image On AWS EC2 For tetsing of website
         run: docker pull sevenajay/tic-tac-toe:latest
       
 
