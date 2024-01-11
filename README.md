@@ -95,11 +95,12 @@ Click the **Search** Fileds, Then Add permissions Policies
 <br/> 
 <br/>
 
-Add These **Three Policies**:
+Add These **Four Policies**:
 
 1.  EC2 full access
 2.  AmazonS3FullAccess
 3.  AmazonEKSClusterPolicy
+4.  AdministratorAccess
 
    
 <img width="1449" alt="Screenshot 2024-01-10 at 2 07 27 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/404bd3a1-8306-44b7-b880-2789bc333af8">
