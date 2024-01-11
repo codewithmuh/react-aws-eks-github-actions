@@ -829,6 +829,54 @@ No Go to Your Slack and create a new channel for notifications.
 
 Now Click on your slack account name --> settings & Administration --> Manage Apps
 
+<img width="1496" alt="Screenshot 2024-01-11 at 5 47 08 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/56bd24f5-f055-462f-9491-45828588edba">
+
+t will open a new tab, select build now
+
+<img width="1496" alt="Screenshot 2024-01-11 at 5 48 09 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/e65abe0e-e89d-449f-93c5-a3396eda62f8">
+
+
+Now Click on Create an app
+
+<img width="1496" alt="Screenshot 2024-01-11 at 5 48 35 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/d7bee46f-c338-485f-a7db-8239ca1409d3">
+
+Select from scratch
+
+<img width="1496" alt="Screenshot 2024-01-11 at 5 49 04 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/c7c4b802-4f08-462f-91cf-34c1adcdf0a1">
+
+Provide a name for the app and select workspace and create
+
+<img width="1496" alt="Screenshot 2024-01-11 at 5 49 54 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/af85162c-b5eb-4a48-b13c-0cf5f8b1ca54">
+
+Select Incoming webhooks
+
+<img width="1496" alt="Screenshot 2024-01-11 at 5 50 30 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/6d1f446e-9fcb-46a2-98e6-5eec644f7f3a">
+
+Now Set incoming webhooks to on
+
+<img width="1496" alt="Screenshot 2024-01-11 at 5 51 03 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/189fa346-e0eb-4ecf-a76d-8a81652c4c32">
+
+Click on Add New webhook to workspace
+
+<img width="1496" alt="Screenshot 2024-01-11 at 5 51 38 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/563d3cc3-a81a-4e5e-9e68-27d23b5a2d5d">
+
+Select Your channel that created for notifications and allow
+
+<img width="1496" alt="Screenshot 2024-01-11 at 5 52 12 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/9a028aaa-55f5-4ce1-b16e-2d3c4bf2e0e4">
+
+It will generate a webhook URL copy it
+
+<img width="1496" alt="Screenshot 2024-01-11 at 5 53 14 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/f0b87569-cc5b-4207-8893-4a9f520a82df">
+
+
+Now come back to GitHub and click on settings
+
+Go to secrets --> actions --> new repository secret and add
+
+<img width="1489" alt="Screenshot 2024-01-11 at 5 56 01 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/ea05fc0a-1cea-43ae-b349-ff08a75dff0a">
+
+
+Add the below code to the deploy.yml workflow and commit and the workflow will start.
 
 ```bash
 
@@ -844,11 +892,10 @@ Now Click on your slack account name --> settings & Administration --> Manage Ap
 
 ```
 
-### Part 10: Running Final/Complete Github actions Workflow
+This step sends a Slack notification. It uses the act10ns/slack action and is configured to run "always," which means it runs regardless of the job status. It sends the notification to the specified Slack channel using the webhook URL stored in secrets.
 
-Now push/Commit Your changes to get workflow trigger.
 
-### Part 11: Delete the infrastructure (To Avoid Extra Billing, if you are just using it for learning Purposes)
+### Part 10: Delete the infrastructure (To Avoid Extra Billing, if you are just using it for learning Purposes)
 
 # Coming Soon
 
