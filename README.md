@@ -896,6 +896,15 @@ If you get this error, Try to configure aws cli on the ec2 instance to resolve t
 
 <img width="1355" alt="Screenshot 2024-01-11 at 8 57 56 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/9f83d0e3-81b8-49a0-82ec-8e3d54f63c6e">
 
+Now our build is completed.
+
+<img width="1341" alt="Screenshot 2024-01-11 at 9 17 57 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/69a5cdea-b740-4a2d-8d64-288f11688192">
+
+
+And here is the Slack notification.
+
+<img width="1167" alt="Screenshot 2024-01-11 at 9 14 47 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/9bea4559-64f0-49db-8054-6b57ba7583b6">
+
 
 ### Part 10: Delete the infrastructure (To Avoid Extra Billing, if you are just using it for learning Purposes)
 
