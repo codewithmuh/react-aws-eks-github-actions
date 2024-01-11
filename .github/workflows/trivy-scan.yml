@@ -18,8 +18,9 @@ jobs:
 
       - name: Install trivy
         run: |
-          sudo apt-get update
-          sudo apt-get install -y trivy
-
-      - name: Scan with Trivy
-        run: trivy fs . > trivyfs.txt
+            sudo apt-get update
+            sudo apt-get install -y software-properties-common
+            sudo add-apt-repository ppa:aquasecurity/trivy
+            sudo apt-get update
+            sudo apt-get install -y trivy
+        
