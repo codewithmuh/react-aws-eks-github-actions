@@ -630,6 +630,26 @@ Also, check your Node Grpup EC2 Instance, by going to EC2 Dashboard.
 
 ### Part 07: Create Deploy Workflow on GitHub  Actions and attach Trivy Image Scan & Docker Hub
 
+Let's create a new workflow with the name 'deploy'  in '.github/workflow'. 
+
+Add these lines to your workflow.
+
+```bash
+- name: NPM Install
+  run: npm install # Add your specific npm install command
+
+- name: Install Trivy
+  run: |
+    # Scanning files
+    trivy fs . > trivyfs.txt
+
+```
+
+This will install npm dependencies. In another step, it runs Trivy to scan files. It scans the current directory (denoted by .) and saves the output to a file named trivyfs.txt.
+
+Now commit this. And check the workflow by going into the Github actions tab.
+
+
 ### Part 08: Deploy Application(image) to AWS EKS
 
 ### Part 09: Integrate Slack Notifications
