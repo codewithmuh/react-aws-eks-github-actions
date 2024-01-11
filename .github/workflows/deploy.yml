@@ -1,0 +1,39 @@
+name: Deploy To EKS
+
+on:
+    workflow_run:
+      workflows: 
+        - Trivy Image Scan Workflow
+      types:
+        - completed
+  
+jobs:
+    build:
+      name: Docker Image Scan
+      runs-on: self-hosted
+      steps:
+        - name: Checkout Repository
+          uses: actions/checkout@v2
+
+        - name: Pull the Docker image
+          run: docker pull codewithmuh/react-aws-eks-github-actions:latest
+
+  
+        - name: Update kubeconfig
+          run: aws eks --region us-west-1 update-kubeconfig --name EKS_cluster_codewithmuh
+  
+        - name: Deploy to EKS
+          run: kubectl apply -f deployment-service.yml
+
+        - name: Send a Slack Notification
+          if: always()
+          uses: act10ns/slack@v1
+          with:
+            status: ${{ job.status }}
+            steps: ${{ toJson(steps) }}
+            channel: '#git'
+          env:
+            SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+  
+  
+  

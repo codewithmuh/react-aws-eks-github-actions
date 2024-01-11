@@ -784,9 +784,69 @@ If it's not working, Try to pull an image on your system and check for errors. F
 
 ### Part 08: Deploy Application(image) to AWS EKS
 
+Now create our final deploy.yml file to deploy on aws eks.
+
+And Paste this content there. (Do not commit yet, commit it after part  09)
+
+**Note**. Make sure to repalce cluster name and region nname with your one.
+
+```bash
+
+name: Deploy To EKS
+
+on:
+    workflow_run:
+      workflows: 
+        - Code Build Workflow
+      types:
+        - completed
+  
+jobs:
+    build:
+      name: Docker Image Scan
+      runs-on: self-hosted
+      steps:
+        - name: Checkout Repository
+          uses: actions/checkout@v2
+
+        - name: Pull the Docker image
+          run: docker pull codewithmuh/react-aws-eks-github-actions:latest
+
+  
+        - name: Update kubeconfig
+          run: aws eks --region us-west-1 update-kubeconfig --name EKS_cluster_codewithmuh
+  
+        - name: Deploy to EKS
+          run: kubectl apply -f deployment-service.yml
+
+```
+This will updates the kubeconfig to configure kubectl to work with an Amazon EKS cluster in the region with the name of your cluster, Also deploys Kubernetes resources defined in the deployment-service.yml file to the Amazon EKS cluster using kubectl apply.
+
+
 ### Part 09: Integrate Slack Notifications
 
+No Go to Your Slack and create a new channel for notifications.
+
+Now Click on your slack account name --> settings & Administration --> Manage Apps
+
+
+```bash
+
+      - name: Send a Slack Notification
+        if: always()
+        uses: act10ns/slack@v1
+        with:
+          status: ${{ job.status }}
+          steps: ${{ toJson(steps) }}
+          channel: '#git'
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+
+```
+
 ### Part 10: Running Final/Complete Github actions Workflow
+
+Now push/Commit Your changes to get workflow trigger.
 
 ### Part 11: Delete the infrastructure (To Avoid Extra Billing, if you are just using it for learning Purposes)
 
