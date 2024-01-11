@@ -1,28 +1,23 @@
 name: Code Build
 
 on:
-    push:
-      branches:
-        - main
-  
+  push:
+    branches:
+      - main
+
 jobs:
-    build:
-      name: Build
-      runs-on: self-hosted
-      steps:
-        - name: Checkout code
-          uses: actions/checkout@v2
+  build:
+    name: Build
+    runs-on: self-hosted
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-        - name: Docker build and push
-          run: |
-            docker build -t react-aws-eks-github-actions .
-            docker tag react-aws-eks-github-actions codewithmuh/react-aws-eks-github-actions:latest
-            docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
-            docker push codewithmuh/react-aws-eks-github-actions:latest
-          env:
-            DOCKER_CLI_ACI: 1
-  
-  
-
-
-
+      - name: Docker build and push
+        run: |
+          docker build -t react-aws-eks-github-actions .
+          docker tag react-aws-eks-github-actions codewithmuh/react-aws-eks-github-actions:latest
+          docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
+          docker push codewithmuh/react-aws-eks-github-actions:latest
+        env:
+          DOCKER_CLI_ACI: 1
