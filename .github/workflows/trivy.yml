@@ -21,5 +21,4 @@ jobs:
         run: docker pull codewithmuh/react-aws-eks-github-actions:latest
 
       - name: Trivy image scan
-        run: |
-          docker run --rm -v $(pwd):/app aquasec/trivy codewithmuh/react-aws-eks-github-actions:latest
+        run:  trivy image codewithmuh/react-aws-eks-github-actions:latest
