@@ -635,13 +635,14 @@ Let's create a new workflow with the name 'deploy'  in '.github/workflow'.
 Add these lines to your workflow.
 
 ```bash
-- name: NPM Install
+name: NPM Install
   run: npm install # Add your specific npm install command
 
-- name: Install Trivy
+name: Install Trivy
   run: |
     # Scanning files
     trivy fs . > trivyfs.txt
+
 
 ```
 
