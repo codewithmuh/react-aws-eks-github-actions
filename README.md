@@ -102,15 +102,11 @@ Add These **Four Policies**:
 3.  AmazonEKSClusterPolicy
 4.  AdministratorAccess
 
-   
-<img width="1449" alt="Screenshot 2024-01-10 at 2 07 27 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/404bd3a1-8306-44b7-b880-2789bc333af8">
+<img width="1196" alt="Screenshot 2024-01-11 at 6 55 41 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/ec891586-603a-4764-ad91-367f77c4b072">   
 
 <br/> 
 <br/> 
 
-<img width="1449" alt="Screenshot 2024-01-10 at 2 07 27 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/059c5dc2-a73c-4adf-ab70-e943df276f66">
-
-<br/> 
 
 Click NEXT and Then click the **Role Name** Field.
 
