@@ -2,7 +2,8 @@ name: Trivy Image Scan Workflow
 
 on:
     workflow_run:
-      workflows: ["Sonar Code Review Workflow", "Code Build Workflow"]
+      workflows: 
+        - Code Build Workflow
       types:
         - completed
   

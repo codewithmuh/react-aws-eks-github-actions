@@ -2,7 +2,8 @@ name: Code Build Workflow
 
 on:
     workflow_run:
-      workflows: ["Sonar Code Review Workflow"]
+      workflows: 
+        - Sonar Code Review Workflow
       types:
         - completed
         
