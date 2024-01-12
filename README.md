@@ -453,33 +453,6 @@ jobs:
 <img width="992" alt="Screenshot 2024-01-10 at 8 16 17 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/4a733d20-d012-46bc-a374-bf633f545836">
 
 
-```bash
-name: Build,Analyze,scan
-
-on:
-  push:
-    branches:
-      - main
-
-
-jobs:
-  build-analyze-scan:
-    name: Build
-    runs-on: [self-hosted]
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
-
-      - name: Build and analyze with SonarQube
-        uses: sonarsource/sonarqube-scan-action@master
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-
-```
-
 Click on commit changes
 
 <img width="1270" alt="Screenshot 2024-01-10 at 8 16 59 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/ae20cee1-355e-4de4-be62-3217923e6ecd">
