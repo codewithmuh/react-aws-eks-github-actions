@@ -416,8 +416,6 @@ Here is the file name
 .github/workflows/sonar.yml  #you can use any name I am using sonar.yml
 ```
 
-<img width="1267" alt="Screenshot 2024-01-10 at 8 13 31 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/27e2ca2a-283f-46ee-87d8-d16f3e575d97">
-
 
 Copy content and add it to the file
 
