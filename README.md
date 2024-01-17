@@ -1,6 +1,7 @@
 # Deploy React Applications on AWS EKS using GitHub Actions and Terraform.
 We plan to utilize GitHub Actions and Terraform to deploy our React project on AWS EKS.
-![readme (10)](https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/a45ea7e5-7c6b-4209-b06f-ac957aa4f5b9)
+
+![readme (11)](https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/f4d89609-e506-4d10-b733-578202e27d6e)
 
 ## Overview:
 We will deploy React Application on aws Elastic Kubernetes(EKS). We will use Github actions for the ci/cd pipeline. We will use EC2 as the self-hosted runner for our GitHub Actions. We will integrate Sonarcube for code analysis and Trivt Image scan to scan our docker images. Also, we will integrate slack to get Build/deployment notifications.
@@ -415,8 +416,6 @@ Here is the file name
 .github/workflows/sonar.yml  #you can use any name I am using sonar.yml
 ```
 
-<img width="1267" alt="Screenshot 2024-01-10 at 8 13 31 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/27e2ca2a-283f-46ee-87d8-d16f3e575d97">
-
 
 Copy content and add it to the file
 
@@ -451,33 +450,6 @@ jobs:
 
 <img width="992" alt="Screenshot 2024-01-10 at 8 16 17 PM" src="https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/4a733d20-d012-46bc-a374-bf633f545836">
 
-
-```bash
-name: Build,Analyze,scan
-
-on:
-  push:
-    branches:
-      - main
-
-
-jobs:
-  build-analyze-scan:
-    name: Build
-    runs-on: [self-hosted]
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
-
-      - name: Build and analyze with SonarQube
-        uses: sonarsource/sonarqube-scan-action@master
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-
-```
 
 Click on commit changes
 
