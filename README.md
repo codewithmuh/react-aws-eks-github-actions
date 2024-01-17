@@ -3,7 +3,7 @@ We plan to utilize GitHub Actions and Terraform to deploy our React project on A
 ![readme (10)](https://github.com/codewithmuh/react-aws-eks-github-actions/assets/51082957/a45ea7e5-7c6b-4209-b06f-ac957aa4f5b9)
 
 ## Overview:
-We will deploy React Application on aws Elastic Kubernetes(EKS). We will use Github actions for the ci/cd pipeline. We will use EC2 as the self-hosted runner for our GitHub Actions. We will integrate Sonarcube for code analysis and Trivt Image scan to scan our docker images. Also, we will integrate Slack to get Build/deployment notifications.
+We will deploy React Application on aws Elastic Kubernetes(EKS). We will use Github actions for the ci/cd pipeline. We will use EC2 as the self-hosted runner for our GitHub Actions. We will integrate Sonarcube for code analysis and Trivt Image scan to scan our docker images. Also, we will integrate slack to get Build/deployment notifications.
 
 ## Support
 <a href="https://www.buymeacoffee.com/codewithmuh" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-yellow.png" alt="Buy Me A Coffee" height="41" width="174"></a>
