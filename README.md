@@ -1,3 +1,6 @@
+### Hit the Star! ⭐
+If you are planning to use this repo for reference, please hit the star. Thanks!
+
 # Deploy React Applications on AWS EKS using GitHub Actions and Terraform.
 We plan to utilize GitHub Actions and Terraform to deploy our React project on AWS EKS.
 
