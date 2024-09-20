@@ -13,7 +13,7 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Docker build and push
         run: |
@@ -26,7 +26,7 @@ jobs:
 
 
       - name: Pull the Docker image On AWS EC2 For tetsing of website
-        run: docker pull sevenajay/tic-tac-toe:latest
+        run: docker pull react-aws-eks-github-actions:latest
       
 
       - name: Stop and remove existing container
